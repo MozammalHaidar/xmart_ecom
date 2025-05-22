@@ -82,29 +82,29 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-# DATABASES = {
-#   'default': {
-#     'ENGINE': 'django.db.backends.postgresql',
-#     'NAME':'neondb',
-#     'USER': 'neondb_owner',
-#     'PASSWORD': 'npg_abHA9c2JiQND',
-#     'HOST': 'ep-bitter-resonance-a1smapa5-pooler.ap-southeast-1.aws.neon.tech',
-#     'PORT': '5432',
-#     'OPTIONS': {
-#       'sslmode': 'require',
-#     },
-#     'DISABLE_SERVER_SIDE_CURSORS': True,
-#   }
-# }
+DATABASES = {
+  'default': {
+    'ENGINE': 'django.db.backends.postgresql',
+    'NAME':'neondb',
+    'USER': 'neondb_owner',
+    'PASSWORD': 'npg_abHA9c2JiQND',
+    'HOST': 'ep-bitter-resonance-a1smapa5-pooler.ap-southeast-1.aws.neon.tech',
+    'PORT': '5432',
+    'OPTIONS': {
+      'sslmode': 'require',
+    },
+    'DISABLE_SERVER_SIDE_CURSORS': True,
+  }
+}
 
 # Replace the SQLite DATABASES configuration with PostgreSQL:
-DATABASES = {
-    'default': dj_database_url.config(
-        # Replace this value with your local database's connection string.
-        default='postgresql://postgres:postgres@localhost:5432/mysite',
-        conn_max_age=600
-    )
-}
+# DATABASES = {
+#     'default': dj_database_url.config(
+#         # Replace this value with your local database's connection string.
+#         default='postgresql://postgres:postgres@localhost:5432/mysite',
+#         conn_max_age=600
+#     )
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
